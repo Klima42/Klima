@@ -219,7 +219,7 @@ const Portfolio = () => {
                 onBlur={() => setTimeout(() => setIsNameMenuOpen(false), 200)}
               >
                 <TerminalIcon className="inline mr-2" />
-                ./your_name
+                ./Kamil.Serrai
               </button>
               
               {isNameMenuOpen && (
