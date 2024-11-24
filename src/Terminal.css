@@ -1,0 +1,49 @@
+/* Terminal Matrix Effect */
+@keyframes matrix {
+    0% {
+      background-position: 0% 0%;
+    }
+    100% {
+      background-position: 0% -1000%;
+    }
+  }
+  
+  .matrix-effect {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .matrix-effect::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, 
+      rgba(0, 255, 65, 0.1) 25%,
+      rgba(0, 255, 65, 0.2) 50%,
+      rgba(0, 255, 65, 0.1) 75%
+    );
+    background-size: 100% 1000%;
+    animation: matrix 5s linear infinite;
+    pointer-events: none;
+  }
+  
+  /* Terminal scrollbar */
+  .terminal-output::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  .terminal-output::-webkit-scrollbar-track {
+    background: #1a1b23;
+  }
+  
+  .terminal-output::-webkit-scrollbar-thumb {
+    background: #00ff41;
+    border-radius: 4px;
+  }
+  
+  .terminal-output::-webkit-scrollbar-thumb:hover {
+    background: #00ff41aa;
+  }
