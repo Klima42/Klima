@@ -352,24 +352,22 @@ const Portfolio = () => {
                       </span>
                     ))}
                   </div>
-                  <div className="flex space-x-4">
-                    <a 
-                      href={project.github}
-                      target="_blank"
-                      rel="noopener noreferrer" 
-                      className="flex items-center text-gray-400 hover:text-[#00ff41] transition-colors"
-                    >
-                      <Github size={20} className="mr-1" /> {t.projects.buttons.code}
-                    </a>
-                    <a 
-                      href={project.demo}
-                      target="_blank"
-                      rel="noopener noreferrer" 
-                      className="flex items-center text-gray-400 hover:text-[#00ff41] transition-colors"
-                    >
-                      <ExternalLink size={20} className="mr-1" /> {t.projects.buttons.demo}
-                    </a>
-                  </div>
+                 {project.title === "StayScape" && (
+                    <div className="mt-6 w-full h-96 relative rounded-lg border border-[#00ff41]/30 bg-[#1a1b23]/90 backdrop-blur-sm overflow-hidden transition-all duration-300 hover:border-[#00ff41]/50">
+                      {/* Terminal-style title bar */}
+                      <div className="flex items-center justify-between px-4 py-2 border-b border-[#00ff41]/30 bg-[#1a1b23]/80">
+                        <div className="flex items-center gap-2">
+                          <div className="w-3 h-3 rounded-full bg-red-500" />
+                          <div className="w-3 h-3 rounded-full bg-yellow-500" />
+                          <div className="w-3 h-3 rounded-full bg-green-500" />
+                        </div>
+                        <div className="flex items-center gap-2">
+                          {previewLoading && <Loader className="w-4 h-4 text-[#00ff41] animate-spin" />}
+                          <span className="text-sm text-[#00ff41] font-mono truncate max-w-[200px]">
+                            https://stayscape.netlify.app/
+                          </span>
+                        </div>
+                      </div>
 
                   {/* Preview Window for Webpixelle3 */}
                   {project.title === "Webpixelle3" && (
