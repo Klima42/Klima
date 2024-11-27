@@ -62,11 +62,11 @@ const Portfolio = () => {
         categories: [
           {
             category: "Frontend",
-            items: ["React.js", "TypeScript", "Tailwind CSS", "Redux"]
+            items: ["React.js", "TypeScript", "Tailwind CSS", "Redux","Angular"]
           },
           {
             category: "Backend",
-            items: ["Node.js", "Python", "PostgreSQL", "MongoDB"]
+            items: ["Node.js", "Python", "PostgreSQL", "MongoDB", "Java Spring Boot", "Symfony"]
           },
           {
             category: "Security",
@@ -132,11 +132,11 @@ const Portfolio = () => {
         categories: [
           {
             category: "Frontend",
-            items: ["React.js", "TypeScript", "Tailwind CSS", "Redux"]
+            items: ["React.js", "TypeScript", "Tailwind CSS", "Redux", "Angular"]
           },
           {
             category: "Backend",
-            items: ["Node.js", "Python", "PostgreSQL", "MongoDB"]
+            items: ["Node.js", "Python", "PostgreSQL", "MongoDB", "Java Spring Boot", "Symfony"]
           },
           {
             category: "Sécurité",
