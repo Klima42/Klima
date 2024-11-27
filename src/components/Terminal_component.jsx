@@ -76,9 +76,12 @@ const Terminal_component = () => {
         '├── Frontend\n' +
         '│   ├── React.js\n' +
         '│   ├── TypeScript\n' +
-        '│   └── Tailwind CSS\n' +
+        '│   ├── Angular\n' +
+        '|   └── Tailwind CSS\n' +
         '├── Backend\n' +
         '│   ├── Node.js\n' +
+        '|   ├── Symfony\n' +
+        '|   ├── Java Spring Boot\n +
         '│   └── Python\n' +
         '└── Security\n' +
         '    ├── Cryptography\n' +
