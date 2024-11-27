@@ -1,15 +1,7 @@
 import { useState, useEffect } from 'react';
 import { 
-  Github, 
-  Linkedin, 
-  Mail, 
-  MenuIcon, 
-  X, 
-  ExternalLink, 
-  Terminal as TerminalIcon, 
-  Code2, 
-  Languages,
-  Loader
+  Github, Linkedin, Mail, MenuIcon, X, ExternalLink, 
+  Terminal as TerminalIcon, Code2, Languages, Loader 
 } from 'lucide-react';
 import Terminal_component from './components/Terminal_component';
 
@@ -46,25 +38,18 @@ const Portfolio = () => {
         title: 'FEATURED PROJECTS',
         items: [
           {
-            title: "E-commerce Platform",
-            description: "Secure e-commerce solution with encrypted transactions",
-            tech: ["React", "Node.js", "MongoDB", "JWT"],
-            github: "https://github.com/Klima42",
-            demo: "#"
-          },
-          {
-            title: "Network Monitor",
-            description: "Real-time network traffic analysis dashboard",
-            tech: ["React", "Socket.io", "D3.js", "Node.js"],
-            github: "https://github.com/Klima42",
-            demo: "#"
-          },
-          {
             title: "Webpixelle3",
             description: "Modern digital agency website with dynamic animations",
             tech: ["React", "Tailwind CSS", "Vite"],
             github: "https://github.com/Klima42",
             demo: "https://webpixelle3.netlify.app/services"
+          },
+          {
+            title: "StayScape",
+            description: "Vacation rental platform with booking system",
+            tech: ["React", "TypeScript", "Tailwind CSS", "Vite"],
+            github: "https://github.com/Klima42",
+            demo: "https://stayscape.netlify.app"
           }
         ],
         buttons: {
@@ -123,25 +108,18 @@ const Portfolio = () => {
         title: 'PROJETS PRINCIPAUX',
         items: [
           {
-            title: "Plateforme E-commerce",
-            description: "Solution e-commerce sécurisée avec transactions cryptées",
-            tech: ["React", "Node.js", "MongoDB", "JWT"],
-            github: "https://github.com/Klima42",
-            demo: "#"
-          },
-          {
-            title: "Moniteur Réseau",
-            description: "Tableau de bord d'analyse du trafic réseau en temps réel",
-            tech: ["React", "Socket.io", "D3.js", "Node.js"],
-            github: "https://github.com/Klima42",
-            demo: "#"
-          },
-          {
             title: "Webpixelle3",
             description: "Site d'agence digitale moderne avec animations dynamiques",
             tech: ["React", "Tailwind CSS", "Vite"],
             github: "https://github.com/Klima42",
             demo: "https://webpixelle3.netlify.app/services"
+          },
+          {
+            title: "StayScape",
+            description: "Plateforme de location de vacances avec système de réservation",
+            tech: ["React", "TypeScript", "Tailwind CSS", "Vite"],
+            github: "https://github.com/Klima42",
+            demo: "https://stayscape.netlify.app"
           }
         ],
         buttons: {
@@ -177,7 +155,6 @@ const Portfolio = () => {
       }
     }
   };
-
   useEffect(() => {
     const texts = translations[language].hero.texts;
     let currentIndex = 0;
@@ -191,10 +168,7 @@ const Portfolio = () => {
   }, [language]);
 
   const t = translations[language];
-
-  const toggleLanguage = () => {
-    setLanguage(prev => prev === 'en' ? 'fr' : 'en');
-  };
+  const toggleLanguage = () => setLanguage(prev => prev === 'en' ? 'fr' : 'en');
 
   return (
     <div className="min-h-screen w-full bg-[#0a0b0f] text-gray-100 overflow-x-hidden relative">
@@ -211,7 +185,6 @@ const Portfolio = () => {
       <nav className="fixed w-full top-0 z-40 bg-[#0a0b0f]/80 backdrop-blur-md border-b border-[#00ff41]/10">
         <div className="max-w-6xl mx-auto px-4">
           <div className="flex justify-between items-center h-16">
-            {/* Logo with Dropdown */}
             <div className="relative">
               <button 
                 className="text-xl font-mono font-bold text-[#00ff41] flex items-center hover:opacity-80 transition-all duration-300"
@@ -224,62 +197,37 @@ const Portfolio = () => {
               
               {isNameMenuOpen && (
                 <div className="absolute top-full left-0 mt-2 w-48 bg-[#1a1b23] border border-[#00ff41]/20 rounded-lg shadow-xl py-1 z-50">
-                  <a 
-                    href="#about" 
-                    className="block px-4 py-2 text-gray-300 hover:bg-[#00ff41]/10 hover:text-[#00ff41] transition-colors"
-                    onClick={() => setIsNameMenuOpen(false)}
-                  >
+                  {/* Navigation Menu Items */}
+                  <a href="#about" className="block px-4 py-2 text-gray-300 hover:bg-[#00ff41]/10 hover:text-[#00ff41] transition-colors">
                     <span className="font-mono text-[#00ff41]/50 mr-2">&gt;</span>
                     {t.nav.about}
                   </a>
-                  <a 
-                    href="#projects" 
-                    className="block px-4 py-2 text-gray-300 hover:bg-[#00ff41]/10 hover:text-[#00ff41] transition-colors"
-                    onClick={() => setIsNameMenuOpen(false)}
-                  >
+                  <a href="#projects" className="block px-4 py-2 text-gray-300 hover:bg-[#00ff41]/10 hover:text-[#00ff41] transition-colors">
                     <span className="font-mono text-[#00ff41]/50 mr-2">&gt;</span>
                     {t.nav.projects}
                   </a>
-                  <a 
-                    href="#skills" 
-                    className="block px-4 py-2 text-gray-300 hover:bg-[#00ff41]/10 hover:text-[#00ff41] transition-colors"
-                    onClick={() => setIsNameMenuOpen(false)}
-                  >
+                  <a href="#skills" className="block px-4 py-2 text-gray-300 hover:bg-[#00ff41]/10 hover:text-[#00ff41] transition-colors">
                     <span className="font-mono text-[#00ff41]/50 mr-2">&gt;</span>
                     {t.nav.skills}
                   </a>
-                  <a 
-                    href="#contact" 
-                    className="block px-4 py-2 text-gray-300 hover:bg-[#00ff41]/10 hover:text-[#00ff41] transition-colors"
-                    onClick={() => setIsNameMenuOpen(false)}
-                  >
+                  <a href="#contact" className="block px-4 py-2 text-gray-300 hover:bg-[#00ff41]/10 hover:text-[#00ff41] transition-colors">
                     <span className="font-mono text-[#00ff41]/50 mr-2">&gt;</span>
                     {t.nav.contact}
                   </a>
                   <div className="border-t border-[#00ff41]/20 my-1"></div>
-                  <a 
-                    href="https://github.com/Klima42" 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
-                    className="block px-4 py-2 text-gray-300 hover:bg-[#00ff41]/10 hover:text-[#00ff41] transition-colors"
-                  >
+                  <a href="https://github.com/Klima42" target="_blank" rel="noopener noreferrer" 
+                     className="block px-4 py-2 text-gray-300 hover:bg-[#00ff41]/10 hover:text-[#00ff41] transition-colors">
                     <Github size={16} className="inline mr-2" />
                     GitHub
                   </a>
-                  <a 
-                    href="https://www.linkedin.com/in/kamil-serrai-ba30b7168" 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
-                    className="block px-4 py-2 text-gray-300 hover:bg-[#00ff41]/10 hover:text-[#00ff41] transition-colors"
-                  >
+                  <a href="https://www.linkedin.com/in/kamil-serrai-ba30b7168" target="_blank" rel="noopener noreferrer" 
+                     className="block px-4 py-2 text-gray-300 hover:bg-[#00ff41]/10 hover:text-[#00ff41] transition-colors">
                     <Linkedin size={16} className="inline mr-2" />
                     LinkedIn
                   </a>
                 </div>
               )}
             </div>
-            
-            {/* Desktop Navigation */}
             <div className="hidden md:flex space-x-8">
               <a href="#about" className="text-gray-300 hover:text-[#00ff41] transition-colors">{t.nav.about}</a>
               <a href="#projects" className="text-gray-300 hover:text-[#00ff41] transition-colors">{t.nav.projects}</a>
@@ -292,7 +240,6 @@ const Portfolio = () => {
             </button>
           </div>
 
-          {/* Mobile Navigation */}
           {isMenuOpen && (
             <div className="md:hidden border-t border-[#00ff41]/10 bg-[#0a0b0f]">
               <div className="px-2 pt-2 pb-3 space-y-1">
@@ -329,14 +276,13 @@ const Portfolio = () => {
           </div>
         </div>
       </section>
-
       {/* Projects Section */}
       <section id="projects" className="py-20 px-4 bg-[#0a0b0f] w-full">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-5xl font-bold text-center mb-16 bg-gradient-to-r from-[#00E5FF] via-[#8A84E2] to-[#9B51E0] text-transparent bg-clip-text">
             {t.projects.title}
           </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 gap-8">
             {t.projects.items.map((project, index) => (
               <div key={index} className="bg-[#1a1b23]/80 backdrop-blur-sm border border-[#00ff41]/10 rounded-lg hover:border-[#00ff41]/30 transition-all duration-300">
                 <div className="p-6">
@@ -353,81 +299,58 @@ const Portfolio = () => {
                     ))}
                   </div>
                   <div className="flex space-x-4">
-                    <a 
-                      href={project.github}
-                      target="_blank"
-                      rel="noopener noreferrer" 
-                      className="flex items-center text-gray-400 hover:text-[#00ff41] transition-colors"
-                    >
+                    <a href={project.github} target="_blank" rel="noopener noreferrer" 
+                       className="flex items-center text-gray-400 hover:text-[#00ff41] transition-colors">
                       <Github size={20} className="mr-1" /> {t.projects.buttons.code}
                     </a>
-                    <a 
-                      href={project.demo}
-                      target="_blank"
-                      rel="noopener noreferrer" 
-                      className="flex items-center text-gray-400 hover:text-[#00ff41] transition-colors"
-                    >
+                    <a href={project.demo} target="_blank" rel="noopener noreferrer" 
+                       className="flex items-center text-gray-400 hover:text-[#00ff41] transition-colors">
                       <ExternalLink size={20} className="mr-1" /> {t.projects.buttons.demo}
                     </a>
                   </div>
 
-                  {/* Preview Window for Webpixelle3 */}
-                  {project.title === "Webpixelle3" && (
-                    <div className="mt-6 w-full h-96 relative rounded-lg border border-[#00ff41]/30 bg-[#1a1b23]/90 backdrop-blur-sm overflow-hidden transition-all duration-300 hover:border-[#00ff41]/50">
-                      {/* Terminal-style title bar */}
-                      <div className="flex items-center justify-between px-4 py-2 border-b border-[#00ff41]/30 bg-[#1a1b23]/80">
-                        <div className="flex items-center gap-2">
-                          <div className="w-3 h-3 rounded-full bg-red-500" />
-                          <div className="w-3 h-3 rounded-full bg-yellow-500" />
-                          <div className="w-3 h-3 rounded-full bg-green-500" />
-                        </div>
-                        <div className="flex items-center gap-2">
-                          {previewLoading && <Loader className="w-4 h-4 text-[#00ff41] animate-spin" />}
-                          <span className="text-sm text-[#00ff41] font-mono truncate max-w-[200px]">
-                            webpixelle3.netlify.app/services
-                          </span>
-                        </div>
+                  {/* Preview Window */}
+                  <div className="mt-6 w-full h-96 relative rounded-lg border border-[#00ff41]/30 bg-[#1a1b23]/90 backdrop-blur-sm overflow-hidden transition-all duration-300 hover:border-[#00ff41]/50">
+                    <div className="flex items-center justify-between px-4 py-2 border-b border-[#00ff41]/30 bg-[#1a1b23]/80">
+                      <div className="flex items-center gap-2">
+                        <div className="w-3 h-3 rounded-full bg-red-500" />
+                        <div className="w-3 h-3 rounded-full bg-yellow-500" />
+                        <div className="w-3 h-3 rounded-full bg-green-500" />
                       </div>
-                      
-                      {/* Preview Content */}
-                      <div className="relative w-full h-[calc(100%-2.5rem)]">
-                        {previewLoading && (
-                          <div className="absolute inset-0 flex items-center justify-center bg-[#1a1b23]/50 backdrop-blur-sm">
-                            <div className="flex flex-col items-center gap-2">
-                              <Loader className="w-8 h-8 text-[#00ff41] animate-spin" />
-                              <span className="text-sm text-[#00ff41] font-mono">Initializing preview...</span>
-                            </div>
-                          </div>
-                        )}
-                        {previewError ? (
-                          <div className="absolute inset-0 flex items-center justify-center bg-[#1a1b23]/50 backdrop-blur-sm">
-                            <div className="text-center px-4">
-                              <p className="text-red-400 font-mono mb-2">Connection failed</p>
-                              <p className="text-sm text-[#00ff41]">Please visit the site directly</p>
-                            </div>
-                          </div>
-                        ) : (
-                          <iframe
-                            src="https://webpixelle3.netlify.app/services"
-                            className="w-full h-full border-0"
-                            onLoad={() => setPreviewLoading(false)}
-                            onError={() => {
-                              setPreviewError(true);
-                              setPreviewLoading(false);
-                            }}
-                            title="Webpixelle3 Services Preview"
-                            sandbox="allow-scripts allow-same-origin"
-                          />
-                        )}
-
-                        {/* Terminal-style scanlines effect */}
-                        <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent to-[#00ff41]/5" 
-                             style={{
-                               backgroundImage: 'repeating-linear-gradient(0deg, rgba(0, 255, 65, 0.03) 0px, rgba(0, 255, 65, 0.03) 1px, transparent 1px, transparent 2px)'
-                             }} />
+                      <div className="flex items-center gap-2">
+                        {previewLoading && <Loader className="w-4 h-4 text-[#00ff41] animate-spin" />}
+                        <span className="text-sm text-[#00ff41] font-mono truncate max-w-[200px]">
+                          {project.demo.replace('https://', '')}
+                        </span>
                       </div>
                     </div>
-                  )}
+                    <div className="relative w-full h-[calc(100%-2.5rem)]">
+                      {previewLoading && (
+                        <div className="absolute inset-0 flex items-center justify-center bg-[#1a1b23]/50 backdrop-blur-sm">
+                          <div className="flex flex-col items-center gap-2">
+                            <Loader className="w-8 h-8 text-[#00ff41] animate-spin" />
+                            <span className="text-sm text-[#00ff41] font-mono">Initializing preview...</span>
+                          </div>
+                        </div>
+                      )}
+                      <iframe
+                        src={project.demo}
+                        className="w-full h-full border-0"
+                        onLoad={() => setPreviewLoading(false)}
+                        onError={() => {
+                          setPreviewError(true);
+                          setPreviewLoading(false);
+                        }}
+                        title={`${project.title} Preview`}
+                        sandbox="allow-scripts allow-same-origin"
+                      />
+                      
+                      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent to-[#00ff41]/5" 
+                           style={{
+                             backgroundImage: 'repeating-linear-gradient(0deg, rgba(0, 255, 65, 0.03) 0px, rgba(0, 255, 65, 0.03) 1px, transparent 1px, transparent 2px)'
+                           }} />
+                    </div>
+                  </div>
                 </div>
               </div>
             ))}
@@ -458,7 +381,6 @@ const Portfolio = () => {
           </div>
         </div>
       </section>
-
       {/* Contact Section */}
       <section id="contact" className="py-20 px-4 bg-[#0a0b0f] w-full">
         <div className="max-w-6xl mx-auto">
