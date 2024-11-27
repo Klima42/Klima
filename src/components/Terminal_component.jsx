@@ -81,7 +81,7 @@ const Terminal_component = () => {
         '├── Backend\n' +
         '│   ├── Node.js\n' +
         '|   ├── Symfony\n' +
-        '|   ├── Java Spring Boot\n +
+        '|   ├── Java Spring Boot\n' +
         '│   └── Python\n' +
         '└── Security\n' +
         '    ├── Cryptography\n' +
