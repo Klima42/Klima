@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import { translations } from './utils/translations';
 
 // Import components
@@ -8,6 +9,7 @@ import Terminal_component from './components/Terminal_component';
 
 // Import pages
 import HomePage from './pages/HomePage';
+import CVPage from './pages/CVPage';
 
 const App = () => {
   const [language, setLanguage] = useState('en');
@@ -16,6 +18,13 @@ const App = () => {
   const [isNameMenuOpen, setIsNameMenuOpen] = useState(false);
   const [previewLoading, setPreviewLoading] = useState(true);
   const [previewError, setPreviewError] = useState(false);
+  const location = useLocation();
+
+  // Reset menu state on route change
+  useEffect(() => {
+    setIsMenuOpen(false);
+    setIsNameMenuOpen(false);
+  }, [location.pathname]);
 
   useEffect(() => {
     const texts = translations[language].hero.texts;
@@ -50,9 +59,17 @@ const App = () => {
   return (
     <div className="min-h-screen w-full bg-[#0a0b0f] text-gray-100 overflow-x-hidden relative">
       <LanguageSwitcher language={language} toggleLanguage={toggleLanguage} />
-      <Navigation t={t} isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} 
-                 isNameMenuOpen={isNameMenuOpen} setIsNameMenuOpen={setIsNameMenuOpen} />
-      <HomePage {...appState} />
+      <Navigation t={t} 
+                 isMenuOpen={isMenuOpen} 
+                 setIsMenuOpen={setIsMenuOpen} 
+                 isNameMenuOpen={isNameMenuOpen} 
+                 setIsNameMenuOpen={setIsNameMenuOpen} />
+      
+      <Routes>
+        <Route path="/" element={<HomePage {...appState} />} />
+        <Route path="/cv" element={<CVPage {...appState} />} />
+      </Routes>
+
       <Terminal_component />
     </div>
   );
