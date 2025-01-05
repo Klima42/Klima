@@ -9,7 +9,7 @@ const Projects = ({ t }) => {
   return (
     <section id="projects" className="py-20 px-4 bg-[#0a0b0f] w-full">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-5xl font-bold text-center mb-16 bg-gradient-to-r from-[#00E5FF] via-[#8A84E2] to-[#9B51E0] text-transparent bg-clip-text">
+        <h2 className="text-5xl font-bold text-center mb-16 text-[#00ff41] font-mono">
           {t.projects.title}
         </h2>
         <div className="grid md:grid-cols-2 gap-8">
