@@ -37,7 +37,20 @@ export const translations = {
             tech: ["React", "TypeScript", "Tailwind CSS", "Vite"],
             github: "https://github.com/Klima42",
             demo: "https://stayscape.netlify.app"
-          }
+          },
+            {
+              title: "ChefGPT",
+              description: "AI-powered culinary assistant with image recognition, custom profiles, and recipe suggestions. Built with React, Netlify Functions, Tailwind CSS, and Supabase for data persistence.",
+              tech: [
+                "React",
+                "Tailwind CSS",
+                "Netlify Functions",
+                "Supabase",
+                "Framer Motion"
+             ],
+              github: "https://github.com/Klima42/your-chefgpt-repo",
+              demo: "https://deep-chef.netlify.app/"
+            }
         ],
         buttons: {
           code: 'Code',
