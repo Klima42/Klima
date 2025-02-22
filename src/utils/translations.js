@@ -39,7 +39,7 @@ export const translations = {
             demo: "https://stayscape.netlify.app"
           },
             {
-              title: "ChefGPT",
+              title: "DeepChef",
               description: "AI-powered culinary assistant with image recognition, custom profiles, and recipe suggestions. Built with React, Netlify Functions, Tailwind CSS, and Supabase for data persistence.",
               tech: [
                 "React",
