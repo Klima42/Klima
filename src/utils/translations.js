@@ -11,11 +11,11 @@ export const translations = {
       hero: {
         texts: [
           'Hello, friend.',
-          'Full Stack Developer',
+          'Angular Developer @ BPCE',
           'Security Enthusiast',
           'Problem Solver'
         ],
-        description: 'Building secure and scalable web applications with a focus on user experience and data protection',
+        description: 'Angular developer at BPCE Solutions informatiques crafting secure, compliant banking experiences',
         buttons: {
           contact: 'Get in Touch',
           work: 'View Work'
@@ -85,10 +85,10 @@ export const translations = {
       },
       cv: {
         title: "My Journey",
-        subtitle: "Full Stack Developer with a passion for creating innovative solutions",
+        subtitle: "Angular developer at BPCE Solutions informatiques building reliable enterprise web apps",
         story: {
           title: "My Story",
-          content: "From system administration to full-stack development, my journey has been driven by a passion for technology and innovation. With a strong foundation in both infrastructure and development, I create comprehensive solutions that bridge technical domains."
+          content: "I moved from systems and network administration to full-stack engineering by obsessing over how complex platforms operate. Today I ship Angular applications for BPCE Solutions informatiques, where accessibility, performance, and security are non-negotiable. I still keep Pixelle 3 as a creative lab, but my primary focus is delivering enterprise-grade features for millions of banking users."
         },
         projects: {
           title: "Featured Projects",
@@ -109,10 +109,9 @@ export const translations = {
               tech: ["Python", "Networking", "GUI Development"]
             },
             {
-              title: "Pixelle 3 Website",
-              description: "Modern web platform showcasing our company's services and portfolio",
-              tech: ["React", "Tailwind CSS", "Vite"],
-              link: "https://webpixelle3.netlify.app/"
+              title: "BPCE Design System Playground",
+              description: "Internal Angular workspace to industrialize UI components, guard accessibility, and share live documentation with feature teams",
+              tech: ["Angular", "Nx", "Storybook", "Jest"]
             }
           ]
         },
@@ -152,11 +151,11 @@ export const translations = {
       hero: {
         texts: [
           'Salut l\'ami',
-          'Développeur Full Stack',
+          'Développeur Angular @ BPCE',
           'Passionné de Sécurité',
           'Résolveur de Problèmes'
         ],
-        description: 'Création d\'applications web sécurisées et évolutives avec un accent sur l\'expérience utilisateur et la protection des données',
+        description: 'Développeur Angular chez BPCE Solutions informatiques, je conçois des expériences bancaires sécurisées et conformes',
         buttons: {
           contact: 'Me Contacter',
           work: 'Voir Projets'
@@ -213,10 +212,10 @@ export const translations = {
       },
       cv: {
         title: "Mon Parcours",
-        subtitle: "Développeur Full Stack passionné par la création de solutions innovantes",
+        subtitle: "Développeur Angular chez BPCE Solutions informatiques, spécialisé dans les applications web critiques",
         story: {
           title: "Mon Histoire",
-          content: "De l'administration système au développement full-stack, mon parcours a été guidé par une passion pour la technologie et l'innovation. Avec une solide base en infrastructure et en développement, je crée des solutions complètes qui font le pont entre les domaines techniques."
+          content: "Je suis passé de l'administration système au développement full-stack par curiosité pour les plateformes complexes. Aujourd'hui je livre des applications Angular pour BPCE Solutions informatiques où l'accessibilité, la performance et la sécurité sont prioritaires. Pixelle 3 reste mon laboratoire créatif, mais ma mission principale consiste à proposer des services bancaires robustes pour des millions d'utilisateurs."
         },
         projects: {
           title: "Projets Phares",
@@ -237,10 +236,9 @@ export const translations = {
               tech: ["Python", "Réseaux", "Développement GUI"]
             },
             {
-              title: "Site Web Pixelle 3",
-              description: "Plateforme web moderne présentant nos services et notre portfolio",
-              tech: ["React", "Tailwind CSS", "Vite"],
-              link: "https://webpixelle3.netlify.app/"
+              title: "Playground Design System BPCE",
+              description: "Espace Angular interne pour industrialiser les composants UI, contrôler l'accessibilité et partager de la documentation vivante avec les squads",
+              tech: ["Angular", "Nx", "Storybook", "Jest"]
             }
           ]
         },

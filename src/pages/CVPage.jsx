@@ -52,20 +52,21 @@ const CVPage = ({ t }) => {
           </div>
           <div className="space-y-6 text-gray-300">
             <p>
-              My journey in technology began with a deep curiosity about how systems work. 
-              Starting with system administration, I developed a strong foundation in 
-              infrastructure and networking, which later proved invaluable in my 
+              My journey in technology began with a deep curiosity about how systems work.
+              Starting with system administration, I developed a strong foundation in
+              infrastructure and networking, which later proved invaluable in my
               transition to full-stack development.
             </p>
             <p>
-              Through my education at ITIS Formation and DonkeySchool, I've cultivated 
-              a diverse skill set that spans both backend and frontend technologies. 
-              This comprehensive understanding allows me to architect complete solutions 
-              and bridge the gap between different technical domains.
+              Today I operate as an Angular developer at BPCE Solutions informatiques, helping
+              squads ship secure and accessible banking experiences. I pair UI engineering
+              with a strong understanding of compliance, reliability, and enterprise delivery
+              so that features reach production safely.
             </p>
             <p>
-              Today, as a co-founder of Pixelle 3, I'm pursuing my passion for creating 
-              innovative web solutions while continuously expanding my technical expertise.
+              I still keep Pixelle 3 alive as a creative lab for experimental interfaces,
+              but it now supports my day-to-day learnings instead of being the main storyline.
+              The mix keeps me sharp on craft while dedicating most of my energy to BPCE.
             </p>
           </div>
         </div>
@@ -97,10 +98,9 @@ const CVPage = ({ t }) => {
               tech={["Python", "Networking", "GUI Development"]}
             />
             <ProjectCard 
-              title="Pixelle 3 Website"
-              description="Modern web platform showcasing our company's services and portfolio."
-              tech={["React", "Tailwind CSS", "Vite"]}
-              link="https://webpixelle3.netlify.app/"
+              title="BPCE Design System Playground"
+              description="Internal Angular workspace that standardizes UI components, accessibility checks, and documentation for BPCE squads."
+              tech={["Angular", "Nx", "Storybook", "Jest"]}
             />
           </div>
         </div>

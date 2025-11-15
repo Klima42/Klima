@@ -48,7 +48,9 @@ const CyberpunkCV = () => {
   const links = {
     linkedin: "https://www.linkedin.com/in/kamil-serrai-ba30b7168/",
     github: "https://github.com/Klima42",
-    portfolio: "https://webpixelle3.netlify.app/",
+    portfolio: "https://kamilserrai.netlify.app/",
+    pixelle: "https://webpixelle3.netlify.app/",
+    bpce: "https://www.groupebpce.com/",
     donkeySchool: "https://donkey.school/",
     ingetis: "https://ingetis.com/",
     cfaItis: "https://cfa-itis.com/"
@@ -61,7 +63,7 @@ const CyberpunkCV = () => {
       <div className={`transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
         <header className="text-center mb-12">
           <h1 className="text-4xl font-bold text-green-400 mb-4 glitch-text">KAMIL SERRAI</h1>
-          <p className="text-xl text-green-300">Full Stack Developer & System Administrator</p>
+          <p className="text-xl text-green-300">Angular Developer @ BPCE Solutions informatiques</p>
           <div className="flex justify-center space-x-6 mt-4">
             {Object.entries(links).slice(0, 3).map(([key, url]) => (
               <a key={key} href={url} target="_blank" rel="noopener noreferrer"
@@ -115,18 +117,25 @@ const CyberpunkCV = () => {
             <div className="border border-green-500/30 p-6 bg-black/60 backdrop-blur-sm">
               <SectionTitle icon={Briefcase} title="Professional Experience" />
               <ExperienceCard
+                title="Angular Developer"
+                company="BPCE Solutions informatiques"
+                date="Oct 2025 - Present"
+                description="Delivering modular Angular front-office capabilities, evolving the BPCE design system, and coaching squads on performance & accessibility."
+                link={links.bpce}
+              />
+              <ExperienceCard
                 title="Co-Founder & Developer"
                 company="Pixelle 3"
-                date="Nov 2024 - Present"
-                description="Leading technical architecture and development of cutting-edge web solutions using React, Vite, and Tailwind CSS."
-                link={links.portfolio}
+                date="Nov 2024 - Oct 2025"
+                description="Led the technical direction of a boutique studio, prototyping modern web concepts with React, Vite, and Tailwind CSS."
+                link={links.pixelle}
               />
               <ExperienceCard
                 title="Full Stack Developer"
                 company="Crédit Agricole Technologies"
                 date="Apr 2024 - Sept 2024"
                 description="Development of RPA tracking tools and user management applications using Angular and Spring Boot."
-                link="#"
+                link="https://www.credit-agricole.com/"
               />
             </div>
 
